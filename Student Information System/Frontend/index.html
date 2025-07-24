@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #D7E1EA;
+            color: rgb(253, 250, 250);
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainContainer {
+            height: 400px;
+            width: 500px;
+            border: 1px solid white;
+            border-radius: 35px;
+            box-shadow: 1px 12px 43px 2px rgba(0,0,0,0.50);
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            color: black;
+        }
+
+        .textboxes {
+            text-align: center;
+        }
+
+        input {
+            height: 20px;
+            width: 400px;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            height: 70px;
+            width: 300px;
+            font-size: 30px;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: black;
+            border: 1px solid black;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <h1>Welcome</h1>
+        <div class="textboxes">
+            <input name="username" id="username" type="text" placeholder="Username"> <br>
+            <input name="password" id="password" type="password" placeholder="Password"> <br>
+            <button onclick="sendData()">Login</button>
+        </div>
+    </div>
+    <script>
+        function sendData() {
+            let Username = document.getElementById("username").value;
+            let Password = document.getElementById("password").value;
+            chrome.webview.postMessage({
+                Username: Username,
+                Password: Password
+            });
+
+        }
+    </script>
+</body>
+</html>
