@@ -12,18 +12,32 @@
             border-radius: 10px;
             height: 600px;
         }
+
         .leftContainer {
             background-color: black;
             color: white;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
+
         .Dashboard {
             font-size: 30px;
             padding: 10px 15px 10px 15px;
         }
 
         .Dashboard:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        .Logout {
+            font-size: 30px;
+            padding: 10px 15px 10px 15px;
+            margin-top: 250px;
+        }
+
+        .Logout:hover {
             background-color: white;
             color: black;
             cursor: pointer;
@@ -37,7 +51,7 @@
 <body>
     <div class="leftContainer">
         <div class="leftContainer-title">
-            <h1>WELCOME</h1>
+            <h1 id="username">WELCOME</h1>
         </div>
         <div class="Dashboard">
             Dashboard
@@ -51,10 +65,26 @@
         <div class="Dashboard">
             Settings
         </div>
+        <div class="Logout" id="logout" onclick="logout()">
+            Logout
+        </div>
     </div>
     <div class="rightContainer">
-
     </div>
+
+    <script>
+        window.chrome.webview.addEventListener('message', (event) => {
+            const data = event.data;
+            if (data.username) {
+                document.getElementById("username").innerText = "WELCOME " + data.username;
+            }
+        });
+
+        function logout() {
+            alert("Logging out... ");
+            window.chrome.webview.postMessage({ action: "logout" });
+        }
+    </script>
 </body>
 </html>
 
