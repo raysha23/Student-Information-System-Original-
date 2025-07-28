@@ -40,7 +40,7 @@
             this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.webView21.Location = new System.Drawing.Point(0, 0);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(696, 406);
+            this.webView21.Size = new System.Drawing.Size(1335, 668);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
             this.webView21.Click += new System.EventHandler(this.webView21_Click);
@@ -49,8 +49,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 406);
+            this.ClientSize = new System.Drawing.Size(1335, 668);
             this.Controls.Add(this.webView21);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -44,7 +44,7 @@ namespace Student_Information_System
                 string username = data["Username"];
                 string password = data["Password"];
 
-                string connection = "Data Source=LAB4-PC30\\LAB2PC45;Initial Catalog=DWQueue;Integrated Security=True;TrustServerCertificate=True";
+                string connection = "Data Source=SHENRON\\SQLEXPRESS;Initial Catalog=SIS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
                 string query = @"SELECT ul.username, ul.password_hash, r.role
                  FROM User_Login ul
                  JOIN Role r ON ul.role_id = r.role_id

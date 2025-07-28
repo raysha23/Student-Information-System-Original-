@@ -1,72 +1,105 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <script src="https://kit.fontawesome.com/8d3ac9dfd2.js"
+            crossorigin="anonymous"></script>
     <style>
         body {
-            background-color: #D7E1EA;
-            color: rgb(253, 250, 250);
-            height: 600px;
+            background-image: url("../Login.png"); 
+            background-size: cover; /* or use 'contain' */
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: end;
             align-items: center;
-        }
-        .mainContainer {
-            height: 400px;
-            width: 500px;
-            border: 1px solid white;
-            border-radius: 35px;
-            box-shadow: 1px 12px 43px 2px rgba(0,0,0,0.50);
-            background-color: white;
+            text-align: center;
         }
 
-        h1 {
-            font-size: 60px;
-            text-align: center;
+        .wrapper {
             color: black;
+            width: 680px;
+            height: 80vh;
         }
 
-        .textboxes {
-            text-align: center;
+        .wrapper h1 {
+            font-size: 60px;
         }
 
-        input {
-            height: 20px;
-            width: 400px;
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 20px;
-        }
-
-        button {
-            height: 70px;
-            width: 300px;
+        .userpass {
             font-size: 30px;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 8px;
-            color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            border: none;
+            border-bottom: 2px solid black;
+            margin-bottom: 20px;
+        }
+
+        .secondbox {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .btnLogin {
             background-color: black;
+            color: white;
+            padding: 10px;
+            width: 400px;
+            font-size: 40px;
+            border: none;
+            border-radius: 50px;
+            margin-top: 30px;
             cursor: pointer;
         }
 
-        button:hover {
-            color: black;
-            border: 1px solid black;
+        .btnLogin:hover {
             background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+
+        .fa-solid {
+            font-size: 23px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            top: 28px;
+            left: 145px;
         }
     </style>
 </head>
 <body>
-    <div class="mainContainer">
-        <h1>Welcome</h1>
-        <div class="textboxes">
-            <input name="username" id="username" type="text" placeholder="Username"> <br>
-            <input name="password" id="password" type="password" placeholder="Password"> <br>
-            <button onclick="sendData()">Login</button>
+    <div class="wrapper">
+        <h1>Welcome!</h1>
+        <div class="input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input id="username" type="text" placeholder="Username" class="userpass" />
         </div>
+
+        <div class="input-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input id="password" type="password" placeholder="Password" class="userpass" />
+        </div>
+        <div class="secondbox">
+            <div class="checkbox">
+                <input type="checkbox" style="cursor: pointer" /><label for="">Remember me</label>
+            </div>
+            <i>Forgot password?</i>
+        </div>
+        <br />
+        <button onclick="sendData()" class="btnLogin">Login</button>
     </div>
     <script>
         function sendData() {
