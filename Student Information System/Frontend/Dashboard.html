@@ -25,17 +25,17 @@
             padding: 10px 15px 10px 15px;
         }
 
-        .Dashboard:hover {
-            background-color: white;
-            color: black;
-            cursor: pointer;
-        }
+            .Dashboard:hover {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
 
-        .Logout {
+        /* .Logout {
             font-size: 30px;
             padding: 10px 15px 10px 15px;
             margin-top: 250px;
-        }
+        } */
 
         .Logout:hover {
             background-color: white;
@@ -46,26 +46,48 @@
         .leftContainer-title {
             padding-left: 15px;
         }
+
+        .leftContainerPicture {
+            height: 80px;
+            /* background-color: pink; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imageContainer {
+            background-color: pink;
+            height: 60px;
+            width: 80px;
+        }
     </style>
 </head>
 <body>
     <div class="leftContainer">
+        <div class="leftContainerPicture">
+            <div class="imageContainer">
+                Picture
+            </div>
+        </div>
         <div class="leftContainer-title">
-            <h1 id="username">WELCOME</h1>
+            <h1 id="username">WELCOME Admin</h1>
         </div>
         <div class="Dashboard">
             Dashboard
         </div>
         <div class="Dashboard">
-            Dashboard
+            Student
         </div>
         <div class="Dashboard">
-            Dashboard
+            Teacher
         </div>
         <div class="Dashboard">
-            Settings
+            Logs
         </div>
-        <div class="Logout" id="logout" onclick="logout()">
+        <div class="Dashboard">
+            Reports
+        </div>
+        <div class="Dashboard" id="logout" onclick="logout()">
             Logout
         </div>
     </div>
