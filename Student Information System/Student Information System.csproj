@@ -141,6 +141,7 @@
     <Content Include="Frontend\Dashboard.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Frontend\design.html" />
     <Content Include="Frontend\index.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
