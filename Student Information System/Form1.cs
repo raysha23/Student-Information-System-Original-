@@ -27,7 +27,7 @@ namespace Student_Information_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string htmlPath = Path.Combine(Application.StartupPath, "Frontend", "index.html");
+            string htmlPath = Path.Combine(Application.StartupPath, "Frontend", "loginForm.html");
             webView21.Source = new Uri(htmlPath);
 
             webView21.WebMessageReceived += WebView21_WebMessageReceived;

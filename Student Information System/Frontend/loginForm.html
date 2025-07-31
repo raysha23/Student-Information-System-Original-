@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | Student Information System</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            width: 400px;
+        }
+
+            .login-container h2 {
+                text-align: center;
+                color: #1976d2;
+                margin-bottom: 32px;
+                font-size: 28px;
+            }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #1976d2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .form-options label {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: normal;
+                color: #444;
+            }
+
+            .form-options input[type="checkbox"] {
+                margin-right: 6px;
+            }
+
+            .form-options a {
+                text-decoration: none;
+                color: #1976d2;
+                font-size: 14px;
+            }
+
+                .form-options a:hover {
+                    text-decoration: underline;
+                }
+
+        button {
+            padding: 14px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+            button:hover {
+                background-color: #0d47a1;
+            }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Welcome!</h2>
+        <form action="#" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+
+            <div class="form-options">
+                <label><input type="checkbox" name="remember" /> Remember Me</label>
+                <a href="Admin-Dashboard.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
