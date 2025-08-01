@@ -126,25 +126,6 @@
             </div>
         </main>
     </div>
-
-    <script>
-        const modal = document.getElementById("addTeacherModal");
-        const addBtn = document.querySelector(".add-btn");
-
-        addBtn.addEventListener("click", () => {
-            modal.style.display = "block";
-        });
-
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        // Optional: Close modal if user clicks outside content
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        };
-    </script>
+    <script src="../AdminUI-SCRIPT/Admin-Teacher.js"></script>
 </body>
 </html>

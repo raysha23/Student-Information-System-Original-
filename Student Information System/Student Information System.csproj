@@ -171,6 +171,12 @@
     <Content Include="Frontend\AdminUI-HTML\AdminProfile.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Frontend\AdminUI-SCRIPT\Admin-Student.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Frontend\AdminUI-SCRIPT\Admin-Teacher.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Frontend\loginForm.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
