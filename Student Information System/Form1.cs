@@ -41,8 +41,8 @@ namespace Student_Information_System
                 // Deserialize the JSON message
                 var data = JsonSerializer.Deserialize<Dictionary<string, string>>(e.WebMessageAsJson);
 
-                string username = data["Username"];
-                string password = data["Password"];
+                string username = data["Username"].Trim();
+                string password = data["Password"].Trim();
 
                 string connection = "Data Source=SHENRON\\SQLEXPRESS;Initial Catalog=SIS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
                 string query = @"SELECT ul.username, ul.password_hash, r.role
@@ -69,7 +69,7 @@ namespace Student_Information_System
                                     string role = reader["role"].ToString();
                                     MessageBox.Show($"Welcome, {username}! You are logged in as {role}.", "Login Success");
 
-                                    Dashboard dashboard = new Dashboard(username);
+                                    AdminMainPage dashboard = new AdminMainPage(username);
                                     dashboard.Show();
                                     this.Hide(); // optional: hide the login form
                                 }

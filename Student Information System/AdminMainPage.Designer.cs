@@ -1,6 +1,6 @@
 ﻿namespace Student_Information_System
 {
-    partial class Dashboard
+    partial class AdminMainPage
     {
         /// <summary>
         /// Required designer variable.

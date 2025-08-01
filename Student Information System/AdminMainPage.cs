@@ -13,10 +13,10 @@ using System.Text.Json;
 
 namespace Student_Information_System
 {
-    public partial class Dashboard : Form
+    public partial class AdminMainPage : Form
     {
         private string username;
-        public Dashboard(string Username)
+        public AdminMainPage(string Username)
         {
             InitializeComponent();
             this.username = Username;
@@ -29,7 +29,9 @@ namespace Student_Information_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            string htmlPath = Path.Combine(Application.StartupPath, "Frontend", "Dashboard.html");
+            
+            string htmlPath = Path.Combine(Application.StartupPath, "Frontend", "AdminUI-HTML", "Admin-Dashboard.html");
+
             webView21.Source = new Uri(htmlPath);
 
             webView21.CoreWebView2InitializationCompleted += (s, args) =>

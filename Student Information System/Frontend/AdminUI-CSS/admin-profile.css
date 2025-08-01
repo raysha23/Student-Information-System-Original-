@@ -1,0 +1,118 @@
+﻿.active {
+    font-weight: bold;
+}
+
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+
+
+/* Main Content */
+.profile-main-horizontal {
+    flex: 1;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50px auto; /* Center horizontally and add vertical spacing */
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Photo and Info Box */
+.profile-photo {
+    text-align: center;
+}
+
+    .profile-photo img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #ccc;
+    }
+
+.upload-btn {
+    margin-top: 12px;
+    padding: 6px 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .upload-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Form Content */
+.profile-form-horizontal {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .form-group input {
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+    }
+
+/* Buttons */
+.button-group {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .save-btn:hover {
+        background-color: #388e3c;
+    }
+
+.cancel-btn {
+    background-color: #e53935;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .cancel-btn:hover {
+        background-color: #c62828;
+    }

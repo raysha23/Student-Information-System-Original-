@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Students | Admin Panel</title>
+    <link rel="stylesheet" href="../AdminUI-CSS/Navagations.css" />
+    <link rel="stylesheet" href="../AdminUI-CSS/admin-student-table.css" />
+    <link rel="stylesheet" href="../AdminUI-CSS/admin-addStudent.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar"><i class="fa-solid fa-user-gear"></i></div>
+                <a href="AdminProfile.html"><p>Welcome Admin!</p></a>
+            </div>
+            <nav class="menu">
+                <a href="Admin-Dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="Admin-Student.html" class="active"><i class="fa-solid fa-user-graduate"></i> Student</a>
+                <a href="Admin-Teacher.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teacher</a>
+                <a href="#"><i class="fa-solid fa-book"></i> Subject</a>
+                <a href="#"><i class="fa-solid fa-file-alt"></i> Logs</a>
+                <a href="#"><i class="fa-solid fa-flag"></i> Reports</a>
+                <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </nav>
+        </aside>
+        <!-- Modal for Adding a Student -->
+        <div class="modal" id="addStudentModal">
+            <div class="modal-content">
+                <h2>Add New Student</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Temporary Password</label>
+                        <input type="password" id="password" name="password" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enrollDate">Enrollment Date</label>
+                        <input type="date" id="enrollDate" name="enrollDate" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status" name="status" required>
+                            <option value="">--Select--</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Student</button>
+                        <button type="button" class="cancel-btn" onclick="closeModal()">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <div class="student-section">
+                <div class="section-header">
+                    <h2>Manage Students</h2>
+                    <button class="add-btn">+ New Student</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="student-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Birthday</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Enrollment Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1001</td>
+                                <td>Juan</td>
+                                <td>Dela Cruz</td>
+                                <td>2003-01-15</td>
+                                <td>Male</td>
+                                <td>juan@example.com</td>
+                                <td>09123456789</td>
+                                <td>Manila</td>
+                                <td>2021-06-10</td>
+                                <td>Active</td>
+                                <td>
+                                    <div class="action-button">
+                                        <button class="edit-btn">Edit</button>
+                                        <button class="delete-btn">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const modal = document.getElementById("addStudentModal");
+        const addBtn = document.querySelector(".add-btn");
+
+        addBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Optional: Close modal if user clicks outside content
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../AdminUI-CSS/Navagations.css" />
+    <link rel="stylesheet" href="../AdminUI-CSS/admin-dashboard.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar"><i class="fa-solid fa-user-gear"></i></div>
+                <a href="AdminProfile.html"><p>Welcome Admin!</p></a>
+            </div>
+
+            <nav class="menu">
+                <a href="Admin-Dashboard.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="Admin-Student.html"><i class="fa-solid fa-user-graduate"></i> Student</a>
+                <a href="Admin-Teacher.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teacher</a>
+                <a href="#"><i class="fa-solid fa-book"></i> Subject</a>
+                <a href="#"><i class="fa-solid fa-file-alt"></i> Logs</a>
+                <a href="#"><i class="fa-solid fa-flag"></i> Reports</a>
+                <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Dashboard Overview</h1>
+
+            <div class="chart-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById("myChart").getContext("2d");
+        const myChart = new Chart(ctx, {
+            type: "bar", // You can change to 'pie', 'line', etc.
+            data: {
+                labels: ["Students", "Teachers", "Subjects", "Reports"],
+                datasets: [
+                    {
+                        label: "School Data",
+                        data: [120, 35, 12, 5],
+                        backgroundColor: [
+                            "rgba(75, 192, 192, 0.6)",
+                            "rgba(255, 159, 64, 0.6)",
+                            "rgba(153, 102, 255, 0.6)",
+                            "rgba(255, 99, 132, 0.6)",
+                        ],
+                        borderColor: [
+                            "rgba(75, 192, 192, 1)",
+                            "rgba(255, 159, 64, 1)",
+                            "rgba(153, 102, 255, 1)",
+                            "rgba(255, 99, 132, 1)",
+                        ],
+                        borderWidth: 1,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+    </script>
+</body>
+</html>

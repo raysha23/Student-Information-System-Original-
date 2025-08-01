@@ -124,8 +124,18 @@
                 <a href="Admin-Dashboard.html">Forgot Password?</a>
             </div>
 
-            <button type="submit">Login</button>
+            <button onclick="sendData()" type="submit">Login</button>
         </form>
     </div>
+    <script>
+     function sendData() {
+         let Username = document.getElementById("username").value;
+         let Password = document.getElementById("password").value;
+         chrome.webview.postMessage({
+             Username: Username,
+             Password: Password
+         });
+     }
+    </script>
 </body>
 </html>

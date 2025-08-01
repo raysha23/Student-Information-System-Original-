@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../AdminUI-CSS/admin-profile.css" />
+    <link rel="stylesheet" href="../AdminUI-CSS/Navagations.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar"><i class="fa-solid fa-user-gear"></i></div>
+                <a href="AdminProfile.html"><p>Welcome Admin!</p></a>
+            </div>
+            <nav class="menu">
+                <a href="AdminProfile.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="Admin-Student.html"><i class="fa-solid fa-user-graduate"></i> Student</a>
+                <a href="Admin-Teacher.html"><i class="fa-solid fa-chalkboard-teacher"></i> Teacher</a>
+                <a href="#"><i class="fa-solid fa-book"></i> Subject</a>
+                <a href="#"><i class="fa-solid fa-file-alt"></i> Logs</a>
+                <a href="#"><i class="fa-solid fa-flag"></i> Reports</a>
+                <a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </nav>
+        </aside>
+
+        <main class="profile-main-horizontal">
+            <section class="profile-card">
+                <div class="profile-photo">
+                    <img src="assets/admin-avatar.png"
+                         alt="Admin Photo"
+                         id="adminPhoto" />
+                    <input type="file" id="uploadPhoto" hidden />
+                    <button class="upload-btn"
+                            onclick="document.getElementById('uploadPhoto').click()">
+                        Change Photo
+                    </button>
+                </div>
+                <div class="admin-info">
+                    <h2>Admin Name</h2>
+                    <p>System Administrator</p>
+                </div>
+            </section>
+
+            <section class="profile-form-container">
+                <form class="profile-form-horizontal">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adminName">Full Name</label>
+                            <input type="text" id="adminName" value="Raymund Sismundo" />
+                        </div>
+                        <div class="form-group">
+                            <label for="adminEmail">Email</label>
+                            <input type="email" id="adminEmail" value="admin@gmail.com" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adminPhone">Phone Number</label>
+                            <input type="text" id="adminPhone" value="09123456789" />
+                        </div>
+                        <div class="form-group">
+                            <label for="adminUsername">Username</label>
+                            <input type="text" id="adminUsername" value="admin2025" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adminAddress">Address</label>
+                            <input type="text"
+                                   id="adminAddress"
+                                   value="Tagbilaran City, Bohol" />
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPosition">Position</label>
+                            <input type="text"
+                                   id="adminPosition"
+                                   value="System Administrator" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adminPassword">New Password</label>
+                            <input type="password" id="adminPassword" />
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" />
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                        <button type="reset" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
