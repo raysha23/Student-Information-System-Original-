@@ -111,4 +111,13 @@
     document.querySelectorAll(".student-table tbody tr").forEach((row) => {
         addActionListeners(row);
     });
+
+    window.chrome.webview.postMessage({ type: "getStudents" });
+
+    window.chrome.webview.addEventListener("message", (event) => {
+        const data = event.data;
+
+        //ibutang sa table, columns sa th, rows sa tr
+    });
+
 });
